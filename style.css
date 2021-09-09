@@ -1,15 +1,86 @@
-.button{
-    background-color: #6D07E6;
-    color: #fff;
-    cursor: pointer;
-    border: none;
-    border-radius: 8px;
-    font-size: 1rem;
-    padding: 10px 30px;
-    transition: all 0.5s ease;
-    font-weight: 500;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-.button:hover{
-    transform: scale(0.98);
+
+html {
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background: #fefefe;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.title {
+    margin: 80px auto;
+    font-size: 3rem;
+    height: 5rem;
+    text-align: center;
+}
+
+.countDown {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #6D07E6;
+    border-radius: 1rem;
+    width: 350px;
+    height: 150px;
+    margin: 10px auto;
+}
+
+.minutes,
+.colons,
+.seconds {
+    font-size: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    color: #f5f5f5;
+}
+
+.colons {
+    font-size: 4rem;
+}
+
+.flicker {
+    animation: flickering 1000ms linear infinite;
+}
+
+.countOver {
+    animation: redFlicker 500ms ease-in-out infinite;
+}
+
+@keyframes flickering {
+    0% {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes redFlicker {
+    0% {
+        background: #fff;
+    }
+
+    100% {
+        background: #ff0000;
+    }
 }
